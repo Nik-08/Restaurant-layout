@@ -1,0 +1,1845 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: Banny;
+  /* Имя шрифта */
+  src: url(media/fonts/Banny-Round.otf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Banny2;
+  /* Имя шрифта */
+  src: url(media/fonts/Banny-LightRound.otf);
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Banny3;
+  /* Имя шрифта */
+  src: url(media/fonts/Banny-BoldRound.otf);
+  /* Путь к файлу со шрифтом */
+}
+
+.yellow-line {
+  border: 4px solid #E8C300;
+  width: 106px;
+  border-radius: 50px;
+}
+
+.title {
+  font-family: "Banny";
+  font-size: 42px;
+  line-height: 48px;
+  height: 56px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 11px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.yellow-square {
+  position: absolute;
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  border: 20px solid #e8c300;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.small-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  position: absolute;
+  left: calc(50% - 75px);
+  margin-top: 25px;
+  width: 150px;
+  height: 150px;
+}
+
+.header {
+  background: url(./media/img/header-bg.jpg) no-repeat;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  -webkit-background-size: cover;
+  /* background-size: contain; */
+  /* background-position: center center; */
+  /* background-position: center; */
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+}
+
+
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.list__item {
+  height: 100px;
+  width: 133px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.list__item-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.list__item:nth-child(4) {
+  margin-right: 220px;
+}
+
+.header__wrapper {
+  display: flex;
+  /* margin-top: 225px; */
+  /* justify-content: space-between; */
+  color: #fff;
+}
+
+.header__timing {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  width: 60px;
+  height: calc(100vh - 100px);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.header__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 998px;
+  margin: 0 81px;
+  position: relative;
+}
+
+.header__main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 998px;
+}
+
+
+.header__main-title-text {
+  font-family: Banny-Bold;
+  margin-top: 14px;
+  font-size: 102px;
+  font-family: "Banny";
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.header__main-buttons {
+  margin-top: 30px;
+  display: flex;
+}
+
+.header__main-button {
+  display: flex;
+  width: 250px;
+  height: 80px;
+  background-color: #E8C300;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header__main-button:nth-last-child(1) {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-left: 40px;
+}
+
+.header__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__social-list {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header__social-list i {
+  font-size: 25px;
+}
+
+.header__main .header__social-circle {
+  position: absolute;
+  bottom: 83px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__main .header__social-circle .header__social-list i {
+  color: #333333;
+  font-size: 16px;
+}
+
+.about {
+  margin: 50px 0;
+}
+
+.about .container {
+  display: flex;
+  position: relative;
+}
+
+.about__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+}
+
+.about__text.subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 11px;
+  margin-bottom: 20px;
+}
+
+.about__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about__image {
+  margin-left: 28px;
+  /* position: relative; */
+}
+
+.about__image-yellow-square {
+  position: absolute;
+  top: 163px;
+  right: 15px;
+}
+
+.team {
+  background-image: url(media/img/team-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.team .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.team__main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.team__main-content {
+  display: flex;
+}
+
+.team__main-image {
+  margin-left: 63px;
+  margin-right: 22px;
+  /* position: relative; */
+  margin-bottom: 50px;
+}
+
+.team__description-title {
+  font-weight: 400;
+}
+
+.team__image-yellow-square {
+  position: absolute;
+  top: 213px;
+  left: 15px;
+}
+
+.team__main-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  /* margin-right: 20px; */
+}
+
+.team__text.subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 11px;
+  margin-bottom: 20px;
+}
+
+.team__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.booking {
+  margin: 50px 0;
+}
+
+.booking .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.booking__content {
+  display: flex;
+}
+
+.booking__form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+}
+
+.booking__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form__input {
+  font-size: 14px;
+  line-height: 20px;
+  width: 285px;
+  height: 70px;
+  padding: 20px;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  outline: none;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+
+
+.form__button {
+  background-color: #e8c300;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.booking__image {
+  margin-left: 28px;
+  position: relative;
+}
+
+.booking__image-yellow-square {
+  position: absolute;
+  top: 163px;
+  right: 15px;
+}
+
+.specialties {
+  background-image: url(media/img/specialties-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.specialties .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.specialties__main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.specialties__main-content {
+  display: flex;
+}
+
+.specialties__main-image {
+  margin-left: 63px;
+  margin-right: 22px;
+  position: relative;
+}
+
+.specialties__description-title {
+  font-weight: 400;
+}
+
+.specialties__image-yellow-square {
+  position: absolute;
+  top: 213px;
+  left: 15px;
+}
+
+.specialties__main-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  /* margin-right: 20px; */
+}
+
+.specialties__text.subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 11px;
+  margin-bottom: 20px;
+}
+
+.specialties__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+
+.specialties__slider-buttons {
+  margin-bottom: 45px;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+.slider-button.slider-button--active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.slider-button {
+  display: inline-block;
+  margin-right: 17px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu {
+  margin: 50px 0;
+}
+
+.menu .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menu__text {
+  width: 565px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.menu__sections {
+  display: flex;
+  align-items: center;
+}
+
+.menu__sections-item {
+  height: 50px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 51px;
+}
+
+.menu__list-item {
+  width: 372px;
+  height: 66px;
+  font-family: "Banny", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+.menu__list-points {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 8px;
+  letter-spacing: 0.5px;
+}
+
+.menu__list-description {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 12px;
+  opacity: 0.5;
+  color: #333;
+  letter-spacing: 0;
+}
+
+.events {
+  background-image: url(media/img/events-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.events .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.events_title {
+  /* height: 50px; */
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.events__image-title--weddings {
+  top: 48px;
+  right: 48px;
+}
+
+.events__image-title--corporate {
+  transform: rotate(180deg);
+  top: 48px;
+  left: 48px;
+}
+
+.events__image-title {
+  position: absolute;
+  box-sizing: border-box;
+  width: 80px;
+  height: 480px;
+  background-color: #000;
+  color: #fff;
+  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  font-family: "Banny", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 12px;
+  text-transform: uppercase;
+  padding: 20px 45px 0 35px;
+}
+
+.events__image {
+  /* margin-left: 28px; */
+  position: relative;
+  /* margin-right: 0px; */
+}
+
+.events__image:nth-last-child(1) {
+  /* margin-right: 28px; */
+  margin-left: 0;
+  position: relative;
+  margin: 0;
+}
+
+.events__image-yellow-square-w {
+  position: absolute;
+  top: 215px;
+  left: 15px;
+}
+
+.events__image-yellow-square-c {
+  position: absolute;
+  top: 215px;
+  right: 15px;
+}
+
+.events__time {
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.gallery {
+  display: flex;
+  overflow-x: hidden;
+  /* max-width: 1440px; */
+}
+
+.gallery img {
+  width: 640px;
+  height: 640px;
+}
+
+.contact {
+  margin-top: 50px;
+}
+
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.contact__description {
+  width: 565px;
+}
+
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"] {
+  margin-right: 10px;
+}
+
+.contact__form textarea {
+  width: 100%;
+  min-height: 120px;
+  font-size: 14px;
+  resize: none;
+}
+
+.form__info-item .fas {
+  color: #e8c300;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.contact__form-info {
+  font-size: 12px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.contact__form-info span {
+  opacity: 0.5;
+}
+
+.contact__form-info .fa-phone {
+  margin-right: 13px;
+  margin-left: 10px;
+}
+
+.contact__form-info .fa-envelope {
+  margin-left: 10px;
+}
+
+.contact__form-input {
+  box-sizing: border-box;
+  width: 420px;
+  height: 60px;
+  padding: 19px 21px;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.contact__form-input--submit {
+  width: 640px;
+  margin-left: 48px;
+  background-color: #e8c300;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact__map {
+  margin-top: 90px;
+
+}
+
+.footer {
+  min-height: 100px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  /* padding-top: 28px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 1440px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .yellow-line {
+    border: 3px solid #E8C300;
+    width: 60px;
+  }
+
+  .small-title {
+    font-size: 12px;
+  }
+
+  .list__item-link {
+    font-size: 12px;
+  }
+
+  .header__timing {
+    font-size: 12px;
+  }
+
+  .header__main-title-text {
+    font-size: 96px;
+  }
+
+  .header__main-button {
+    width: 200px;
+    height: 60px;
+  }
+
+  .header__social-list {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header__social-list i {
+    font-size: 20px;
+  }
+
+  .header__main .header__social-circle {
+    position: absolute;
+    bottom: 5px;
+  }
+
+  .about__text.subtitle {
+    font-size: 18px;
+  }
+
+  .about__text {
+    font-size: 14px;
+  }
+
+  .about__image {
+    margin-left: 128px;
+  }
+
+  .about__image img {
+    width: 475px;
+    height: 475px;
+  }
+
+  .about__image-yellow-square {
+    top: 113px;
+  }
+
+  .team__text.subtitle {
+    font-size: 18px;
+  }
+
+  .team__text {
+    font-size: 14px;
+  }
+
+  .team__main-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .team__main-image {
+    margin-left: 78px;
+    margin-right: 0;
+  }
+
+  .team__main-image img {
+    width: 475px;
+    height: 475px;
+  }
+
+  .team__image-yellow-square {
+    top: 163px;
+  }
+
+  .booking__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .booking__image {
+    margin-right: 78px;
+    position: relative;
+  }
+
+  .booking__image img {
+    width: 475px;
+    height: 475px;
+  }
+
+  .booking__image-yellow-square {
+    top: 113px;
+  }
+
+  .specialties__main-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .specialties__text.subtitle {
+    font-size: 18px;
+  }
+
+  .specialties__text {
+    font-size: 14px;
+  }
+
+  .specialties__main-image {
+    margin-left: 78px;
+  }
+
+  .specialties__main-image img {
+    width: 475px;
+    height: 475px;
+  }
+
+  .specialties__image-yellow-square {
+    top: 163px;
+  }
+
+  .menu__text {
+    font-size: 16px;
+  }
+
+  .events__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .events__image-title {
+    position: absolute;
+    box-sizing: border-box;
+    width: 80px;
+    height: 395px;
+    background-color: #000;
+    color: #fff;
+    writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    font-family: "Banny", "Arial", sans-serif;
+    font-size: 24px;
+    line-height: 12px;
+    text-transform: uppercase;
+    padding: 20px 45px 0 35px;
+  }
+
+  .events__image-title--weddings {
+    top: 40px;
+    right: 40px;
+  }
+
+  .events__image-title--corporate {
+    top: 40px;
+    left: 40px;
+  }
+
+  .events__image {
+    margin-left: 78px;
+  }
+
+  .events__image:nth-last-child(1) {
+    margin-left: 0;
+    margin-right: 78px;
+  }
+
+  .events__image img {
+    width: 475px;
+    height: 475px;
+  }
+
+  .events__image-yellow-square-w {
+    top: 173px;
+  }
+
+  .events__image-yellow-square-c {
+    top: 173px;
+  }
+
+  .events__time {
+    font-size: 12px;
+  }
+
+  .gallery img {
+    width: 360px;
+    height: 360px;
+  }
+
+  .contact__description {
+    font-size: 16px;
+  }
+
+  .contact__map {
+    margin-top: 60px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .yellow-square {
+    width: 200px;
+    height: 200px;
+    border: 15px solid #e8c300;
+  }
+
+  .yellow-line {
+    border: 3px solid #E8C300;
+    width: 50px;
+  }
+
+  .small-title {
+    font-size: 10px;
+  }
+
+  .list__item {
+    height: 100px;
+    width: 120px;
+  }
+
+  .list__item-link {
+    font-size: 10px;
+  }
+
+  .header__timing {
+    font-size: 12px;
+  }
+
+  .header__main-title-text {
+    font-size: 80px;
+  }
+
+  .header__main-button {
+    width: 170px;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .header__social-list {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header__social-list i {
+    font-size: 14px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about__text.subtitle {
+    font-size: 14px;
+  }
+
+  .about__text {
+    font-size: 12px;
+  }
+
+  .about__image {
+    margin-right: 68px;
+  }
+
+  .about__image img {
+    width: 375px;
+    height: 375px;
+  }
+
+  .about__image-yellow-square {
+    top: 88px;
+  }
+
+  .team__text.subtitle {
+    font-size: 14px;
+  }
+
+  .team__text {
+    font-size: 12px;
+  }
+
+  .team__main-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .team__main-image {
+    margin-left: 68px;
+    margin-right: 0;
+  }
+
+  .team__main-image img {
+    width: 375px;
+    height: 375px;
+  }
+
+  .team__image-yellow-square {
+    top: 138px;
+  }
+
+  .booking__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .booking__image {
+    margin-right: 68px;
+    position: relative;
+  }
+
+  .booking__image img {
+    width: 375px;
+    height: 375px;
+  }
+
+  .booking__image-yellow-square {
+    top: 88px;
+  }
+
+  .booking__form .form__button {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .booking__time {
+    font-size: 12px;
+  }
+
+  .form__input {
+    font-size: 12px;
+    width: 260px;
+    height: 60px;
+    padding: 15px;
+  }
+
+  .specialties__main-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .specialties__text.subtitle {
+    font-size: 14px;
+  }
+
+  .specialties__text {
+    font-size: 12px;
+  }
+
+  .specialties__main-image {
+    margin-left: 68px;
+  }
+
+  .specialties__main-image img {
+    width: 375px;
+    height: 375px;
+  }
+
+  .specialties__image-yellow-square {
+    top: 138px;
+  }
+
+  .menu__text {
+    font-size: 14px;
+  }
+
+  .menu__sections {
+    font-size: 14px;
+  }
+
+  .menu__list-item {
+    font-size: 14px;
+    width: 330px;
+    height: 50px;
+  }
+
+  .events__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .events__image-title {
+    width: 60px;
+    height: 315px;
+    font-size: 18px;
+    padding: 10px 35px 0 25px;
+  }
+
+  .events__image-title--weddings {
+    top: 30px;
+    right: 30px;
+  }
+
+  .events__image-title--corporate {
+    top: 30px;
+    left: 30px;
+  }
+
+  .events__image {
+    margin-left: 68px;
+  }
+
+  .events__image:nth-last-child(1) {
+    margin-left: 0;
+    margin-right: 68px;
+  }
+
+  .events__image img {
+    width: 375px;
+    height: 375px;
+  }
+
+  .events__image-yellow-square-w {
+    top: 155px;
+  }
+
+  .events__image-yellow-square-c {
+    top: 155px;
+  }
+
+  .events__time {
+    font-size: 10px;
+  }
+
+  .gallery img {
+    width: 256px;
+    height: 256px;
+  }
+
+  .contact__description {
+    font-size: 14px;
+  }
+
+  .contact__form-input {
+    box-sizing: border-box;
+    width: 324px;
+    height: 50px;
+    font-size: 10px;
+  }
+
+  .contact__form-info {
+    font-size: 10px;
+    height: 50px;
+  }
+
+  .contact__form-input--submit {
+    flex: 1;
+  }
+
+  .contact__map {
+    margin-top: 40px;
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .yellow-square {
+    width: 150px;
+    height: 150px;
+    border: 10px solid #e8c300;
+  }
+
+  .yellow-line {
+    border: 3px solid #E8C300;
+    width: 50px;
+  }
+
+  .small-title {
+    font-size: 10px;
+  }
+
+  .list__item {
+    height: 100px;
+    width: 100px;
+  }
+
+  .list__item-link {
+    font-size: 10px;
+  }
+
+  .header__timing {
+    font-size: 10px;
+  }
+
+  .header__main-title-text {
+    font-size: 60px;
+  }
+
+  .header__main-button {
+    width: 140px;
+    height: 40px;
+    font-size: 10px;
+  }
+
+  .header__social-list {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__social-list i {
+    font-size: 10px;
+  }
+
+  .header__main .header__social-circle .header__social-list i {
+    font-size: 10px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about__text.subtitle {
+    font-size: 12px;
+  }
+
+  .about__text {
+    font-size: 10px;
+  }
+
+  .about__image {
+    margin-right: 50px;
+    margin-left: 30px;
+  }
+
+  .about__image img {
+    width: 275px;
+    height: 275px;
+  }
+
+  .about__image-yellow-square {
+    top: 62px;
+  }
+
+  .team__text.subtitle {
+    font-size: 12px;
+  }
+
+  .team__text {
+    font-size: 10px;
+  }
+
+  .team__main-image {
+    margin-left: 50px;
+    margin-right: 0;
+  }
+
+  .team__main-image img {
+    width: 275px;
+    height: 275px;
+  }
+
+  .team__image-yellow-square {
+    top: 112px;
+  }
+
+  .booking__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .booking__image {
+    margin-right: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .booking__image img {
+    width: 275px;
+    height: 275px;
+  }
+
+  .booking__image-yellow-square {
+    top: 211px;
+  }
+
+  .booking__form .form__button {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .booking__time {
+    font-size: 10px;
+  }
+
+  .form__input {
+    font-size: 12px;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+  }
+
+  .form__input-wrpper {
+    width: 100%;
+  }
+
+  .specialties__main-content {
+    margin-top: 20px;
+  }
+
+  .specialties__text.subtitle {
+    font-size: 12px;
+  }
+
+  .specialties__text {
+    font-size: 10px;
+  }
+
+  .specialties__main-image {
+    margin-left: 50px;
+  }
+
+  .specialties__main-image img {
+    width: 275px;
+    height: 275px;
+  }
+
+  .specialties__image-yellow-square {
+    top: 133px;
+  }
+
+  .slider-button {
+    width: 7px;
+    height: 7px;
+  }
+
+  .menu__text {
+    font-size: 12px;
+  }
+
+  .menu__sections {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .menu__sections-item {
+    width: 100%;
+    height: 40px;
+  }
+
+  .menu__list-item {
+    font-size: 12px;
+    width: 245px;
+    height: 60px;
+  }
+
+  .menu__list-description {
+    font-size: 10px;
+  }
+
+  .events__image-title {
+    width: 30px;
+    height: 230px;
+    font-size: 12px;
+    padding: 10px 25px 0 15px;
+  }
+
+  .events__image-title--weddings {
+    top: 23px;
+    right: 23px;
+  }
+
+  .events__image-title--corporate {
+    top: 23px;
+    left: 23px;
+  }
+
+  .events__image {
+    margin-left: 50px;
+  }
+
+  .events__image:nth-last-child(1) {
+    margin-left: 0;
+    margin-right: 50px;
+  }
+
+  .events__image img {
+    width: 275px;
+    height: 275px;
+  }
+
+  .events__image-yellow-square-w {
+    top: 126px;
+  }
+
+  .events__image-yellow-square-c {
+    top: 126px;
+  }
+
+  .events__time {
+    font-size: 10px;
+  }
+
+  .gallery img {
+    width: 256px;
+    height: 256px;
+  }
+
+  .contact__description {
+    font-size: 12px;
+  }
+
+  .contact__form-input {
+    width: 239px;
+    height: 40px;
+    font-size: 10px;
+  }
+
+
+  .contact__form textarea {
+    font-size: 10px;
+  }
+
+  .contact__form-info {
+    font-size: 8px;
+    height: 40px;
+  }
+
+  .contact__form-input--submit {
+    flex: 1;
+  }
+
+  .contact__map {
+    margin-top: 30px;
+  }
+
+  .footer {
+    font-size: 8px;
+  }
+}
+
+@media(max-width: 575px) {
+  .header {
+    position: relative;
+    /* background-size: contain; */
+  }
+
+  .yellow-square {
+    display: none;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .small-title {
+    font-size: 8px;
+  }
+
+  .header__logo {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 30px);
+  }
+
+  .header__logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header__menu-list {
+    display: none;
+    text-align: end;
+  }
+
+  .header__social {
+    display: none;
+  }
+
+  .header__main {
+    margin: 0;
+    height: 100vh;
+  }
+
+  .header__main .header__social-circle {
+    bottom: 30px;
+  }
+
+  .header__main-buttons {
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 45px;
+  }
+
+  .header__main-button {
+    width: 100%;
+  }
+
+  .header__main-button:nth-last-child(1) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header__timing {
+    /* display: b; */
+    writing-mode: unset;
+    transform: rotate(0);
+    position: absolute;
+    bottom: 20px;
+    height: auto;
+    width: 100%;
+    font-size: 10px;
+    left: 0;
+  }
+
+  .header__main-title-text {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+
+  .about__image {
+    display: none;
+  }
+
+  .team__main-image {
+    display: none;
+  }
+
+  .team__main-description {
+    margin-bottom: 50px;
+  }
+
+  .booking__image {
+    display: none;
+  }
+
+  .booking__time {
+    text-align: center;
+  }
+
+  .specialties__main-image {
+    display: none;
+  }
+
+  .menu__text {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .menu__sections {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .menu__sections-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  }
+
+  .menu__list-item {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .events__content {
+    flex-direction: column;
+  }
+
+  .events__image {
+    margin: 0;
+    width: 100%;
+  }
+
+  .events__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .events__image-title {
+    height: 208px;
+  }
+
+  .events__image-title--weddings {
+    top: 21px;
+    right: 21px;
+  }
+
+  .events__image-title--corporate {
+    top: 21px;
+    left: 21px;
+  }
+
+  .events__time {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .gallery {
+    width: 100%;
+
+  }
+
+  .gallery img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .contact__description {
+    width: auto;
+  }
+
+  .contact__form-input {
+    width: 100%;
+    /* margin: 0; */
+  }
+
+
+
+  .contact input[type="text"],
+  .contact input[type="email"] {
+    margin-right: 0px;
+  }
+
+  .contact__form-info {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .contact__form-info .fas {
+    margin-left: 0;
+  }
+
+  .contact__form-input--submit {
+    margin-left: 0;
+  }
+
+  .contact__map {
+    display: none;
+  }
+
+  .footer {
+    min-height: 50px;
+  }
+}
+
+@media(max-width: 540px) {
+  .events__image-title {
+    height: 82%;
+  }
+
+  .events__image-title--weddings {
+    top: 44px;
+    right: 44px;
+  }
+
+  .events__image-title--corporate {
+    top: 44px;
+    left: 44px;
+  }
+}
+
+
+@media(max-width: 414px) {
+
+
+  .events__image-title--weddings {
+    top: 32px;
+    right: 31px;
+  }
+
+  .events__image-title--corporate {
+    top: 32px;
+    left: 31px;
+  }
+}
+
+
+@media(max-width: 375px) {
+  .events__image-title--weddings {
+    top: 29px;
+    right: 28px;
+  }
+
+  .events__image-title--corporate {
+    top: 29px;
+    left: 28px;
+  }
+}
+
+
+@media(max-width: 320px) {
+  .events__image-title--weddings {
+    top: 24px;
+    right: 24px;
+  }
+
+  .events__image-title--corporate {
+    top: 24px;
+    left: 24px;
+  }
+}
+
+@media(max-width: 280px) {
+  .events__image-title--weddings {
+    top: 21px;
+    right: 21px;
+  }
+
+  .events__image-title--corporate {
+    top: 21px;
+    left: 21px;
+  }
+}
