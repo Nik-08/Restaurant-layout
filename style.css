@@ -772,8 +772,10 @@ li {
   font-size: 12px;
   line-height: 20px;
   color: #fff;
+  display: flex;
   text-transform: uppercase;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact__map {
